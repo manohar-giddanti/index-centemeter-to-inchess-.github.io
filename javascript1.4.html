@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript1.2</title>
+</head>
+<style>
+    body{
+        background-color: lightcoral;
+    }
+ button{
+    position: relative;
+    left: 10vw;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    background: linear-gradient(yellow,red,green,greenyellow,pink,black,orange,blue);
+   padding: 2vh;
+   border-radius: 10%;
+}
+button{
+        border-radius: 10%;
+        background: linear-gradient(yellow,red,green);
+    }
+    a:hover{
+        color: greenyellow;
+    }
+    #cti{
+        background-color: lightblue;
+        border-radius: 10%;
+        padding: 10vh;
+    }
+    #convert{
+        position: relative;
+        left: 20vh;
+    }
+
+</style>
+<body>
+    <header>
+        <div id="grid">
+            <div><button><a href="javascript.1.html">Home</a></button></div>
+            <div><button><a href="javascript1.1.html">Centemeter to inchess</a></button></div>
+            <div><button><a href="javascript1.2.html">Inchess to centemeter</a></button></div>
+            <div><button><a href="javascript1.3.html">Kilometer to meters</a></button></div>
+            <div><button><a href="javascript1.4.html">Meters to Kilometers</a></button></div>
+        </div>
+    </header>
+    <br><br><br><br><br><br><br><br>
+    <h1>Convert meters to Kilometer</h1>
+    <br><br> 
+    <div id="cti">
+        <div>
+            <label for="meters">Meters:</label>
+            <input type="text" name="Meters:" id="meters" class="meters">
+        </div>
+        
+    
+        <br>
+    <div id="convert">
+        <button type="button" onclick="convert()">Convert </button>
+    </div>
+    <br>
+    <div>
+        <label for="kilometers">Kilometers</label>
+        <input type="text" name="Kilometers" id="kilometers" class="kilometers">
+    </div>
+
+    <br>
+</div>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+<script>
+    function convert(){
+        let b = document.querySelector(".meters").value;
+        let kilometers = b/1000 ;
+        document.querySelector(".kilometers").value = kilometers;
+}
+</script>
+    
+</body>
+</html>
